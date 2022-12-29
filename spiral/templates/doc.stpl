@@ -1,0 +1,7 @@
+# <%- package %>
+
+Mocking version: <%- version %>
+
+This package is a meta package created by spiral-rs.
+Please see https://github.com/Spiral-repo for more information.
+

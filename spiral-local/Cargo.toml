@@ -1,0 +1,19 @@
+[package]
+name = "spiral-local"
+version = "0.1.0"
+edition = "2021"
+authors = ["Kay Lin <i@v2bv.net>"]
+description = "Command line tool for generating empty Debian packages locally"
+homepage = "https://github.com/Spiral-repo/spiral"
+repository = "https://github.com/Spiral-repo/spiral"
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+spiral = { path = "../spiral" }
+log = "^0.4"
+clap = { version = "4.0", features = [ "derive" ] }
+anyhow = "^1.0"
+pretty_env_logger = "^0.4"
+backtrace = "0.3.66"

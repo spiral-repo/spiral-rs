@@ -1,0 +1,7 @@
+Package: <%- package %>
+Version: <%- version %>
+Architecture: <%- architecture %>
+Maintainer: <%- maintainer %>
+Description: <%- description %><% if !depends.is_empty() { %>
+Depends: <%- depends.join(", ") %><% } %>
+
