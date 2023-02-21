@@ -1,11 +1,7 @@
-pub mod contents;
-
 use serde::{Serialize, Deserialize};
 
 use std::ops::Deref;
 use std::collections::HashMap;
-
-use contents::Lib;
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct HardcodeTable {
@@ -45,19 +41,19 @@ impl From<HardcodeTable> for LookupTable {
     }
 }
 
-impl From<Vec<Lib>> for LookupTable {
-    fn from(l: Vec<Lib>) -> Self {
-        let mut entries = HashMap::new();
-        for lib in l {
-            for translated_name in vec![lib.get_translated_lib_name(), lib.get_translated_dev_name()] {
-                entries.insert(translated_name, lib.get_lib_name());
-            }
-        }
-        Self {
-            entries,
-        }
-    }
-}
+// impl From<Vec<Lib>> for LookupTable {
+//     fn from(l: Vec<Lib>) -> Self {
+//         let mut entries = HashMap::new();
+//         for lib in l {
+//             for translated_name in vec![lib.get_translated_lib_name(), lib.get_translated_dev_name()] {
+//                 entries.insert(translated_name, lib.get_lib_name());
+//             }
+//         }
+//         Self {
+//             entries,
+//         }
+//     }
+// }
 
 impl Deref for LookupTable {
     type Target = HashMap<String, String>;
@@ -83,10 +79,6 @@ impl LookupTable {
     }
 
     pub fn append_hardcode_table(&mut self, other: HardcodeTable) {
-        self.merge(Self::from(other))
-    }
-
-    pub fn append_libs(&mut self, other: Vec<Lib>) {
         self.merge(Self::from(other))
     }
 }
