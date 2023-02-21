@@ -1,0 +1,15 @@
+[package]
+name = "apt_parser"
+version = "0.1.0"
+edition = "2021"
+authors = ["Kay Lin <i@v2bv.net>"]
+description = "Library for parsing apt control files"
+homepage = "https://github.com/Spiral-repo/spiral"
+repository = "https://github.com/Spiral-repo/spiral"
+license = "MIT"
+
+[dependencies]
+nom = "7.1"
+
+[dev-dependencies]
+flate2 = "1.0"

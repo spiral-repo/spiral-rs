@@ -16,3 +16,4 @@ usr/lib/libXtst.so   x11/x11-lib
 usr/lib/libXtst.so.6   x11/x11-lib
 usr/lib/libXtst.so.6.1.0   x11/x11-lib
 ./usr/lib/libssl.so.1.1   libs/openssl
+usr/bin/bash   shells/bash

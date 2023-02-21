@@ -1,5 +1,6 @@
 [workspace]
 members = [
+    "apt_parser",
     "spiral",
     "spiral-local",
 ]
